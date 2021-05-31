@@ -8,9 +8,9 @@
 
 import Foundation
 
-func linearSearch(numbers: [Int], x: Int) -> Int {
-    for i in 0..<numbers.count {
-        if numbers[i] == x {
+func linearSearch(arr: [Int], x: Int) -> Int {
+    for i in 0..<arr.count {
+        if arr[i] == x {
             return i
         }
     }
@@ -22,7 +22,7 @@ let input = readLine()
 print("Enter the number to be searched")
 let x = readLine()
 if let arr = input?.split(separator: " ").map({ Int($0)! }), let searchInput = x {
-    let index = linearSearch(numbers: Array(arr), x: Int(searchInput)!)
+    let index = linearSearch(arr: Array(arr), x: Int(searchInput)!)
     index != -1 ? print("Index of number: \(index)") : print("Number not found in the array")
 } else {
     print("Invalid input")
